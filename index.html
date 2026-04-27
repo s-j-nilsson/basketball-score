@@ -46,7 +46,12 @@ Opponent 0
 <div id="game-screen" class="screen hidden">
   <header>
     <h1 id="gameTitle"></h1>
-    <h2 id="periodLabel"></h2>
+
+    <div class="period-header-controls">
+      <button id="prevPeriod">◀</button>
+      <h2 id="periodLabel"></h2>
+      <button id="nextPeriod">▶</button>
+    </div>
   </header>
 
   <div class="teams">
@@ -67,11 +72,6 @@ Opponent 0
     <button id="undo">Undo</button>
     <button id="share">Share score</button>
     <button id="newGame">New Game</button>
-  </div>
-
-  <div class="period-controls">
-    <button id="prevPeriod">◀</button>
-    <button id="nextPeriod">▶</button>
   </div>
 </div>
 

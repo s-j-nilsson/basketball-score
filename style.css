@@ -72,6 +72,22 @@ header { text-align: center; }
 
 .period-controls { display: flex; gap: 8px; margin-top: 8px; }
 
+.period-header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.period-header-controls h2 {
+  margin: 0;
+}
+
+.period-header-controls button {
+  font-size: 1.5rem;
+  padding: 8px 14px;
+}
+
 @media (orientation: landscape) {
   header { display: flex; justify-content: space-between; align-items: center; }
   .teams { flex-direction: row; }
