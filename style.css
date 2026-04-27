@@ -1,0 +1,88 @@
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f6f6f6;
+}
+
+.screen { padding: 16px; }
+.hidden { display: none; }
+section { margin-bottom: 16px; }
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input { width: 100%; padding: 8px; font-size: 16px; }
+
+button {
+  min-height: 56px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+}
+
+button:active { transform: scale(0.97); }
+
+header { text-align: center; }
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team {
+  padding: 20px 16px;
+  border-radius: 14px;
+}
+
+.team.vb {
+  background: #0047ab;
+  color: white;
+}
+
+.team.opponent {
+  background: white;
+  color: #111;
+  border: 1px solid #ddd;
+}
+
+.name { font-size: 26px; font-weight: 700; }
+.score { font-size: 64px; font-weight: 800; margin: 12px 0; }
+
+.buttons { display: flex; gap: 12px; }
+
+.buttons button { flex: 1; font-size: 22px; font-weight: 700; }
+
+.team.vb .buttons button { background: rgba(255,255,255,0.15); color: white; }
+.team.opponent .buttons button { background: #eee; color: #111; }
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+#newGame { background: #c62828; color: white; grid-column: span 2; }
+
+.period-controls { display: flex; gap: 8px; margin-top: 8px; }
+
+@media (orientation: landscape) {
+  header { display: flex; justify-content: space-between; align-items: center; }
+  .teams { flex-direction: row; }
+  .team { flex: 1; }
+  .score { font-size: 84px; }
+  .controls { grid-template-columns: repeat(4, 1fr); }
+  #newGame { grid-column: span 1; }
+}
+
+.preview {
+  background: #f0f0f0;
+  padding: 10px;
+  white-space: pre-line;
+}
