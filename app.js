@@ -15,7 +15,7 @@
         const gameScreen = document.getElementById('game-screen');
 
         let config = JSON.parse(localStorage.getItem('config')) || {
-          team1: 'VB', numPeriods: 4, scoring: {1:false,2:true,3:true}
+          team1: 'VB', numPeriods: 4, scoring: {1:false,2:true,3:false}
         };
 
         let game = null;
