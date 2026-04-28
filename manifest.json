@@ -1,6 +1,6 @@
 
 {
-  "name": "Basketball Score",
+  "name": "Score Keeper",
   "icons": [
     {
       "src": "/icons/192.png",
@@ -13,7 +13,7 @@
       "sizes": "512x512"
     }
   ],
-  "short_name": "Score",
+  "short_name": "ScoreKeeper",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
