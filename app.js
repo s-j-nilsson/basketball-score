@@ -15,7 +15,7 @@
         const gameScreen = document.getElementById('game-screen');
 
         let config = JSON.parse(localStorage.getItem('config')) || {
-          team1: 'VB F15', numPeriods: 4, scoring: {1:false,2:true,3:false}
+          team1: 'VB F15', numPeriods: 6, scoring: {1:false,2:true,3:false}
         };
 
         let game = null;
@@ -63,7 +63,7 @@
 ${config.team1} ${total('a')} - ${total('b')} ${team2.value}` });
         };
 
-        newGame.onclick = () => { if(confirm('Start new game?')){ disableWakeLock(); location.reload(); } };
+        newGame.onclick = () => { if(confirm('Starta ny match?')){ disableWakeLock(); location.reload(); } };
 
         document.addEventListener('visibilitychange', () => {
           if (document.visibilityState === 'visible' && !gameScreen.classList.contains('hidden')) enableWakeLock();
@@ -71,7 +71,7 @@ ${config.team1} ${total('a')} - ${total('b')} ${team2.value}` });
         });
 
         function render(){
-          gameTitle.textContent = `${config.team1} vs ${team2.value}`;
+          gameTitle.textContent = `${config.team1} - ${team2.value}`;
           periodLabel.textContent = `Period ${game.period}`;
           name1.textContent = config.team1;
           name2.textContent = team2.value;

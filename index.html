@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>Basketball Score</title>
+  <title>Basketresultat</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="./icons/180.png">
@@ -12,35 +12,44 @@
 <body>
 
 <div id="config-screen" class="screen">
-  <h1>New Game</h1>
+  <h1>Ny match</h1>
 
   <section>
-    <h2>Teams</h2>
-    <label>Team 1<input id="team1" /></label>
-    <label>Team 2<input id="team2" /></label>
+    <h2>Lag</h2>
+    <label>Lag 1<input id="team1" /></label>
+    <label>Lag 2<input id="team2" /></label>
   </section>
 
   <section>
-    <h2>Game format</h2>
-    <label>Number of periods<input id="numPeriods" type="number" min="1" max="10" /></label>
+    <h2>Matchformat</h2>
+    <label>
+      Antal perioder
+      <select id="numPeriods">
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </label>
   </section>
 
   <section>
-    <h2>Scoring</h2>
-    <label><input type="checkbox" id="p1"> 1 point</label>
-    <label><input type="checkbox" id="p2"> 2 points</label>
-    <label><input type="checkbox" id="p3"> 3 points</label>
+    <h2>Poäng</h2>
+    <label><input type="checkbox" id="p1"> 1 poäng</label>
+    <label><input type="checkbox" id="p2"> 2 poäng</label>
+    <label><input type="checkbox" id="p3"> 3 poäng</label>
   </section>
 
   <section>
-    <h2>Sharing</h2>
+    <h2>Delning</h2>
     <pre class="preview">
 Period 1
-VB 0 - Opponent 0
+VB 0 - Motståndare 0
     </pre>
   </section>
 
-  <button id="startGame">Start Game</button>
+  <button id="startGame">Starta match</button>
 </div>
 
 <div id="game-screen" class="screen hidden">
@@ -69,9 +78,9 @@ VB 0 - Opponent 0
   </div>
 
   <div class="controls">
-    <button id="undo">Undo</button>
-    <button id="share">Share score</button>
-    <button id="newGame">New Game</button>
+    <button id="undo">Ångra</button>
+    <button id="share">Dela resultat</button>
+    <button id="newGame">Ny match</button>
   </div>
 </div>
 
