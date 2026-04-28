@@ -58,9 +58,12 @@
         nextPeriod.onclick = () => { if(game.period<config.numPeriods) game.period++; render(); };
 
         share.onclick = async () => {
-          const title = game.period===config.numPeriods ? 'Slutresultat' : 'Period '+game.period;
-          await navigator.share({ text: `${title}
-${config.team1}     ${total('a')} - ${total('b')}     ${team2.value}` });
+          const title = game.period === config.numPeriods ? 'Slutresultat' : 'Period ' + game.period;
+          const text = `*${title}*
+
+          *${config.team1}*     ${total('a')} - ${total('b')}     *${team2.value}*`;
+  
+          await navigator.share({ text });
         };
 
         newGame.onclick = () => { if(confirm('Starta ny match?')){ disableWakeLock(); location.reload(); } };
