@@ -29,8 +29,8 @@
         p3.checked = config.scoring[3];
 
         startGame.onclick = () => {
-          if (!team1.value || !team2.value) return alert('Enter team names');
-          if (![p1,p2,p3].some(c=>c.checked)) return alert('Select scoring');
+          if (!team1.value || !team2.value) return alert('Ange lagnamn');
+          if (![p1,p2,p3].some(c=>c.checked)) return alert('Välj poängknappar');
 
           config = {
             team1: team1.value,
