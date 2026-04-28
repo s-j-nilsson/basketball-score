@@ -59,11 +59,8 @@
 
         share.onclick = async () => {
           const title = game.period === config.numPeriods ? 'Slutresultat' : 'Period ' + game.period;
-          const text = `*${title}*
-
-          *${config.team1}*     ${total('a')} - ${total('b')}     *${team2.value}*`;
-  
-          await navigator.share({ text });
+          await navigator.share({ text: `${title}
+${config.team1}     ${total('a')} - ${total('b')}     ${team2.value}` });
         };
 
         newGame.onclick = () => { if(confirm('Starta ny match?')){ disableWakeLock(); location.reload(); } };
