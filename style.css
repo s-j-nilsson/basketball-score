@@ -12,8 +12,15 @@ body {
 section { margin-bottom: 16px; }
 
 label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-bottom: 8px;
+}
+
+label:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
 }
 
 input,
